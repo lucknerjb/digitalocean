@@ -14,7 +14,7 @@ First, fetch the setup script and run it::
    password is recorded.
 2. Update ``visudo`` to use emacs::
 
-     sudo update-alternatives --config editor.
+     sudo update-alternatives --config editor
 
 3. Modify sudoers with ``visudo``::
 
