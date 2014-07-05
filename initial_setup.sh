@@ -30,7 +30,9 @@ apt-get -y install zlib1g-dev
 # Install virtualenvwrapper
 pip install virtualenvwrapper
 
+# Add the deploy user
 useradd deploy
+chsh deploy -s /bin/bash
 mkdir /home/deploy
 mkdir /home/deploy/.ssh
 chmod 700 /home/deploy/.ssh
