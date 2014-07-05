@@ -1,4 +1,5 @@
-# Digital Ocean setup
+Digital Ocean setup
+===================
 
 One of these days I'll set up enough servers that I'll take the time
 to learn ansible, chef or Puppet. For now, here's some bash scripts
