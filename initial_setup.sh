@@ -8,7 +8,24 @@ apt-get update
 apt-get upgrade
 
 # Install the packages we'll need
-apt-get -y install build-essential emacs24 fail2ban git libjpeg libjpeg-dev libfreetype6 libfreetype6-dev libpq-dev nginx postgresql postgresql-contrib python-dev python-pip unattended-upgrades uwsgi uwsgi-plugin-python zlib1g-dev
+apt-get -y install build-essential
+apt-get -y install emacs24
+apt-get -y install fail2ban
+apt-get -y install git
+apt-get -y install libfreetype6
+apt-get -y install libfreetype6-dev
+apt-get -y install libjpeg
+apt-get -y install libjpeg-dev
+apt-get -y install libpq-dev
+apt-get -y install nginx
+apt-get -y install postgresql
+apt-get -y install postgresql-contrib
+apt-get -y install python-dev
+apt-get -y install python-pip
+apt-get -y install unattended-upgrades
+apt-get -y install uwsgi
+apt-get -y install uwsgi-plugin-python
+apt-get -y install zlib1g-dev
 
 useradd deploy
 mkdir /home/deploy
