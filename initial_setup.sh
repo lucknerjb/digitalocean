@@ -14,7 +14,7 @@ apt-get -y install fail2ban
 apt-get -y install git
 apt-get -y install libfreetype6
 apt-get -y install libfreetype6-dev
-apt-get -y install libjpeg
+apt-get -y install libjpeg62
 apt-get -y install libjpeg-dev
 apt-get -y install libpq-dev
 apt-get -y install nginx
