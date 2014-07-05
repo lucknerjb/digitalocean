@@ -11,7 +11,10 @@ First, fetch the setup script and run it::
     bash initial_setup.sh
 
 1. Make sure we've got a passwd for sudo'ing to root, and that that
-   password is recorded.
+   password is recorded::
+
+    passwd deploy
+
 2. Update ``visudo`` to use emacs::
 
      sudo update-alternatives --config editor
