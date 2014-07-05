@@ -47,7 +47,7 @@ chown deploy:deploy /home/deploy -R
 mkdir /var/www
 chown deploy:deploy /var/www -R
 
-
+# Set up virtualenvwrapper
 /bin/cat <<EOM >~deploy/.profile
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
