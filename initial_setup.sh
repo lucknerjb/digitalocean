@@ -27,6 +27,9 @@ apt-get -y install uwsgi
 apt-get -y install uwsgi-plugin-python
 apt-get -y install zlib1g-dev
 
+# Install virtualenvwrapper
+pip install virtualenvwrapper
+
 useradd deploy
 mkdir /home/deploy
 mkdir /home/deploy/.ssh
@@ -42,8 +45,6 @@ chown deploy:deploy /home/deploy -R
 mkdir /var/www
 chown deploy:deploy /var/www -R
 
-# Install virtualenvwrapper
-pip install virtualenvwrapper
 
 /bin/cat <<EOM >~deploy/.profile
 export WORKON_HOME=$HOME/.virtualenvs
