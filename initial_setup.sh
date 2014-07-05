@@ -1,9 +1,14 @@
+#!/bin/bash
+set -o nounset
+set -o errexit
+set -o xtrace
+
 # Ensure we're up to date
 apt-get update
 apt-get upgrade
 
 # Install the packages we'll need
-apt-get install build-essential emacs24 fail2ban git libjpeg libjpeg-dev libfreetype6 libfreetype6-dev libpq-dev nginx postgresql postgresql-contrib python-dev python-pip unattended-upgrades uwsgi uwsgi-plugin-python zlib1g-dev
+apt-get -y install build-essential emacs24 fail2ban git libjpeg libjpeg-dev libfreetype6 libfreetype6-dev libpq-dev nginx postgresql postgresql-contrib python-dev python-pip unattended-upgrades uwsgi uwsgi-plugin-python zlib1g-dev
 
 useradd deploy
 mkdir /home/deploy
