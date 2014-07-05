@@ -5,7 +5,7 @@ set -o xtrace
 
 # Ensure we're up to date
 apt-get update
-apt-get upgrade
+apt-get -y upgrade
 
 # Install the packages we'll need
 apt-get -y install build-essential
