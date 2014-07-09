@@ -60,9 +60,11 @@ chown deploy:deploy ~deploy/.profile
 wget https://raw.githubusercontent.com/dominicrodger/digitalocean/master/patches/nginx.conf.patch
 wget https://raw.githubusercontent.com/dominicrodger/digitalocean/master/patches/sshd_config.patch
 wget https://raw.githubusercontent.com/dominicrodger/digitalocean/master/patches/10periodic.patch
+wget https://raw.githubusercontent.com/dominicrodger/digitalocean/master/patches/sudoers.patch
 patch /etc/nginx/nginx.conf < nginx.conf.patch
 patch /etc/ssh/sshd_config < sshd_config.patch
 patch /etc/apt/apt.conf.d/10periodic < 10periodic.patch
+patch /etc/sudoers < sudoers.patch
 
 # Restart services we've modified
 service ssh restart

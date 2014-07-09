@@ -10,16 +10,7 @@ First, fetch the setup script and run it::
     wget https://raw.githubusercontent.com/dominicrodger/digitalocean/master/initial_setup.sh
     bash initial_setup.sh
 
-1. Make sure we've set a passwd for sudo'ing to root, and ensure that
-   password is recorded::
+Then, make sure we've set a passwd for sudo'ing to root, and ensure
+that password is recorded::
 
     passwd deploy
-
-2. Update ``visudo`` to use emacs::
-
-     sudo update-alternatives --config editor
-
-3. Modify sudoers with ``visudo``::
-
-    root    ALL=(ALL) ALL
-    deploy  ALL=(ALL) ALL
