@@ -41,7 +41,6 @@ chmod 700 /home/deploy/.ssh
 # directory
 cp ~/.ssh/authorized_keys /home/deploy/.ssh/
 chmod 400 /home/deploy/.ssh/authorized_keys
-chown deploy:deploy /home/deploy -R
 
 # Give the deploy user writes to modify /var/www
 mkdir /var/www
@@ -54,7 +53,8 @@ export PROJECT_HOME=~deploy/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 EOM
 
-chown deploy:deploy ~deploy/.profile
+# Give the deploy user rights to their files
+chown deploy:deploy /home/deploy -R
 
 # Fetch and apply patches
 wget https://raw.githubusercontent.com/dominicrodger/digitalocean/master/patches/nginx.conf.patch
