@@ -42,7 +42,7 @@ chmod 700 /home/deploy/.ssh
 cp ~/.ssh/authorized_keys /home/deploy/.ssh/
 chmod 400 /home/deploy/.ssh/authorized_keys
 
-# Give the deploy user writes to modify /var/www
+# Give the deploy user permission to modify /var/www
 mkdir /var/www
 chown deploy:deploy /var/www -R
 
