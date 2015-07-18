@@ -27,9 +27,6 @@ apt-get -y install uwsgi
 apt-get -y install uwsgi-plugin-python
 apt-get -y install zlib1g-dev
 
-# Install virtualenvwrapper
-pip install virtualenvwrapper
-
 # Add the deploy user
 useradd deploy
 chsh deploy -s /bin/bash
@@ -37,21 +34,14 @@ mkdir /home/deploy
 mkdir /home/deploy/.ssh
 chmod 700 /home/deploy/.ssh
 
-# Digital Ocean will (hopefully) have put your SSH keys in the root's
-# directory
+# Digital Ocean will (hopefully) have put your SSH keys in the root
+# user's directory
 cp ~/.ssh/authorized_keys /home/deploy/.ssh/
 chmod 400 /home/deploy/.ssh/authorized_keys
 
 # Give the deploy user permission to modify /var/www
 mkdir /var/www
 chown deploy:deploy /var/www -R
-
-# Set up virtualenvwrapper
-/bin/cat <<EOM >~deploy/.profile
-export WORKON_HOME=~deploy/.virtualenvs
-export PROJECT_HOME=~deploy/Devel
-source /usr/local/bin/virtualenvwrapper.sh
-EOM
 
 # Give the deploy user rights to their files
 chown deploy:deploy /home/deploy -R
@@ -65,6 +55,10 @@ patch /etc/nginx/nginx.conf < nginx.conf.patch
 patch /etc/ssh/sshd_config < sshd_config.patch
 patch /etc/apt/apt.conf.d/10periodic < 10periodic.patch
 patch /etc/sudoers < sudoers.patch
+rm nginx.conf.path
+rm sshd_config.pth
+rm 10periodic.patch
+rm sudoers.patch
 
 # Restart services we've modified
 service ssh restart
