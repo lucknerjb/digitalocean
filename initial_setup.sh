@@ -55,8 +55,8 @@ patch /etc/nginx/nginx.conf < nginx.conf.patch
 patch /etc/ssh/sshd_config < sshd_config.patch
 patch /etc/apt/apt.conf.d/10periodic < 10periodic.patch
 patch /etc/sudoers < sudoers.patch
-rm nginx.conf.path
-rm sshd_config.pth
+rm nginx.conf.patch
+rm sshd_config.patch
 rm 10periodic.patch
 rm sudoers.patch
 
