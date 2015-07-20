@@ -22,6 +22,8 @@ apt-get -y install postgresql
 apt-get -y install postgresql-contrib
 apt-get -y install python-dev
 apt-get -y install python-pip
+apt-get -y install python-virtualenv
+apt-get -y install supervisor
 apt-get -y install unattended-upgrades
 apt-get -y install uwsgi
 apt-get -y install uwsgi-plugin-python
