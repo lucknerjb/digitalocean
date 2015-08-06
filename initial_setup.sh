@@ -17,6 +17,8 @@ apt-get -y install libfreetype6-dev
 apt-get -y install libjpeg-dev
 apt-get -y install libjpeg62
 apt-get -y install libpq-dev
+apt-get -y install libxml2-dev
+apt-get -y install libxslt1-dev
 apt-get -y install nginx
 apt-get -y install postgresql
 apt-get -y install postgresql-contrib
